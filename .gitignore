@@ -1,0 +1,9 @@
+backend/.env
+backend/__pycache__
+backend/venv/
+backend/next_timestamp.json
+backend/garage.db
+
+frontend/.env
+frontend/package-lock.json
+frontend/node_modules/

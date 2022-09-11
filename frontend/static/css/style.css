@@ -1,0 +1,380 @@
+body {
+    font-family: "Roboto Mono", monospace;
+}
+
+/* index.html & contact.html */
+#footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#footer-links {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+#footer-disclaimer {
+    font-size: 0.8125em;
+    max-width: 90%;
+}
+
+.footer-button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.45em;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    color: #2e3134;
+    background-color: #f3f3f3;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.link-button-small {
+    font-size: 0.875em;
+    width: 6.85em;
+}
+
+.link-button:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.icon::before, .icon::after {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    margin-right: 0.2em;
+}
+
+.icon-contact::before {
+    content: "\f1d8";
+}
+
+.icon-source::before {
+    content: "\f121";
+}
+
+/* contact.html */
+#contact-html {
+    height: 100%;
+}
+
+#contact-body {
+    height: calc(100% - 8px);
+}
+
+#flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#contact-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+}
+
+#reason-list {
+    margin-bottom: 50px;
+}
+
+#mail-button {
+    margin-bottom: 10px;
+}
+
+#copy-check {
+    position: absolute;
+    opacity: 0;
+    right: -1.5625em;
+}
+
+.link-button-big {
+    font-size: 1.2em;
+    width: 20em;
+}
+
+.link-button-medium {
+    position: relative;
+    width: 14em;
+}
+
+.icon-mail::before {
+    content: "\f0e0";
+}
+
+.icon-copy::before {
+    content: "\f328";
+}
+
+.icon-check::before {
+    color: #5b995b;
+    content: "\f00c";
+}
+
+.icon-status::before {
+    content: "\f5e4";
+}
+
+@keyframes check-animation {
+    0% {opacity: 0;}
+    25% {opacity: 1;}
+    85% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* index.html */
+#title {
+    display: inline-block;
+    text-align: right;
+    margin-left: 15%;
+}
+
+#title-top {
+    font-size: 1.625em;
+    margin: 0;
+}
+
+#title-bottom {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0 0 10px 0; 
+}
+
+.garage-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.garage-content-header {
+    border-radius: 1.25em;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 5px 0; 
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.garage-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+
+.garage-table-header {
+    color: #ffffff;
+    background-color: #313030;
+}
+
+.garage-table-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+}
+
+.garage-table {
+    flex: 1;
+    min-width: 15.9375em;
+    max-width: 15.9375em;
+}
+
+.column-level {
+    text-align: left;
+    padding: 0.8em;
+}
+
+.column-color {
+    border-radius: 0.4em;
+    text-align: center;
+}
+
+.column-spaces {
+    text-align: right;
+}
+
+.icon-arrow {
+    opacity: 0;
+    margin: 0 0.1em 0 0.2em;
+}
+
+.icon-arrow-increase-history {
+    opacity: 1;
+    margin: 0 0.1em 0 0.2em;
+    color: green;
+}
+
+.icon-arrow-decrease-history {
+    opacity: 1;
+    margin: 0 0.1em 0 0.2em;
+    color: red;
+}
+
+@keyframes arrow-animation {
+    0% {opacity: 0;}
+    25% {opacity: 1;}
+    85% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.icon-no-change {
+    opacity: 1;
+    font-size: 0.895rem;
+    color: grey;
+}
+
+.hide-element {
+    opacity: 0;
+}
+
+.garage-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.parking-green {
+    color: #ffffff;
+    background-color: #005710;
+}
+
+.parking-gold {
+    color: #000000;
+    background-color: #ffdd00;
+}
+
+.parking-orange {
+    color: #000000;
+    background-color: #e59900;
+}
+
+.parking-purple {
+    color: #ffffff;
+    background-color: #773dbc;
+}
+
+.parking-pay {
+    color: #ffffff;
+    background-color: #63636e;
+}
+
+.table-time {
+    display: flex; 
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.8125em;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.table-time-live-icon {
+    margin-right: 0.4em;
+    --fa-animation-duration: 3s;
+}
+
+.table-time-history-icon {
+    margin-right: 0.4em;
+}
+
+.table-time-text {
+    margin-left: 0.55em;
+}
+
+@keyframes text-fadein {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+.weekday-selector {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    width: 100%;
+    max-width: 20em;
+}
+
+.weekday-button {
+    display: flex;
+    justify-content: center;
+    border-radius: 1em;
+    min-width: max-content;
+    width: 2.8575em;
+    border: none;
+    font: inherit;
+    font-size: 0.875em;
+    color: grey;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.garage-chart {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    min-height: 25em;
+}
+
+.garage-canvas {
+    flex: 1;
+    width: 100%;
+    min-height: 1em;
+    height: 100%;
+}
+
+@media only screen and (max-width: 21.875em) {
+    #title {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .garage-container {
+        margin-bottom: 40px;
+    }
+    
+    .garage-content {
+        flex-flow: row;
+        height: 28.125em;
+    }
+    
+    .garage-table {
+        height: 100%;
+    }
+
+    .garage-chart {
+        min-width: 0;
+        max-height: 100%;
+        height: 100%;
+    }
+}

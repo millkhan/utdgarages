@@ -1,0 +1,56 @@
+doctype html
+html 
+    head
+        title utdgarages
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(href="/static/css/style.css" rel="stylesheet" type="text/css")
+    body   
+        div(id="title")
+            h1(id="title-top") Parking Structures
+            h2(id="title-bottom") Live Status
+        each garageName in ["PS1", "PS3", "PS4"]
+                div(id=`garage-${garageName}` class="garage-container")
+                    header(class="garage-content-header") #{garageName}
+                    div(class="garage-content")
+                        div(class="garage-table-content")
+                            table(class="garage-table")
+                                tr(class="garage-table-header") 
+                                    th Level
+                                    th Color
+                                    th Spaces
+                                each rowIdx in [0, 1, 2, 3, 4, 5, 6]
+                                    tr
+                                        td(class="column-level") #{templateFunctions.setLevelText(rowIdx, garageName)}
+                                        td(class="column-color" class=templateFunctions.setParkingClass(rowIdx, garageName)) !{templateFunctions.setPermitText(rowIdx, garageName)}
+                                        td(class="column-spaces" class=`${garageName}-space`) #{response["live_table"][garageName][rowIdx]}
+                                            span(class="fa-solid fa-angles-up icon-arrow")
+                            div(class="table-time")
+                                span(id=`${garageName}-time-icon` class="table-time-live-icon fa-solid fa-rotate fa-spin")
+                                t Avail. Spaces at
+                                t(id=`${garageName}-time-text` class="table-time-text") !{response["table_time"]}
+                        div(class="garage-chart")
+                            div(class="weekday-selector")
+                                each weekday, index in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+                                    a(index=index class="weekday-button not-selectable" garage=garageName) #{weekday}
+                            div(class="garage-canvas")
+                                canvas(id=`${garageName}-chart`)
+        footer
+            div(id="footer")
+                div(id="footer-links")
+                    a(href="/contact" class="icon-contact icon footer-button link-button-small link-button") Contact
+                    a(href="https://github.com/millkhan/utdgarages" class="icon-source icon footer-button link-button-small link-button") Source
+                t(id="footer-disclaimer") This website is not affiliated with, endorsed, sponsored, or specifically approved by UTD - UTD is not responsible for this website.
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous")
+        script(src="/static/scripts/table-manager.js")
+        script(src="/static/scripts/chart-manager.js")
+        script(src="/static/scripts/update-manager.js")

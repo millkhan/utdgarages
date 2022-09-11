@@ -1,0 +1,35 @@
+doctype html
+html(id="contact-html")
+    head 
+        title Contact | utdgarages
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(href="/static/css/style.css" rel="stylesheet" type="text/css")
+    body(id="contact-body")   
+        div(id="flex-wrapper")
+            div(id="contact-content")
+                t Contact Reasons:
+                ul(id="reason-list") 
+                    li Questions.
+                    li Feedback.
+                    li Bug reporting.
+                    li Tell how utdgarages has helped you.
+                    li Anything else!
+                a(href="mailto:millkhan.dev@gmail.com" id="mail-button" class="icon-mail icon link-button-big link-button") millkhan.dev@gmail.com
+                a(id="copy-button" class="icon-copy icon link-button-medium link-button") Copy to clipboard
+                    span(id="copy-check" class="icon-check icon")
+            footer
+                div(id="footer")
+                    div(id="footer-links")
+                        a(href="/" class="icon-status icon footer-button link-button-small link-button") Status
+                        a(href="https://github.com/millkhan/utdgarages" class="icon-source icon footer-button link-button-small link-button") Source
+                    t(id="footer-disclaimer") This website is not affiliated with, endorsed, sponsored, or specifically approved by UTD - UTD is not responsible for this website.
+        
+        script(src="/static/scripts/contact.js")
