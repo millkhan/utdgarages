@@ -437,7 +437,7 @@ const CHART_MANAGER = (function() {
         const indexClicked = weekdayButton.getAttribute("index");
         const garageName = weekdayButton.getAttribute("garage");
 
-        if (chartData.garageChartDatasets[indexClicked] === null || indexClicked > chartData.garageChartDatasets.length) {
+        if (chartData.garageChartDatasets[indexClicked] === null || indexClicked > chartData.garageChartDatasets.length - 1) {
             return;
         }
 
