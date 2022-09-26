@@ -74,7 +74,7 @@ body {
 }
 
 #contact-body {
-    height: calc(100% - 8px);
+    height: calc(100% - 16px);
 }
 
 #flex-wrapper {
@@ -141,6 +141,7 @@ body {
 /* index.html */
 #title {
     display: inline-block;
+    width: max-content;
     text-align: right;
     margin-left: 15%;
 }
