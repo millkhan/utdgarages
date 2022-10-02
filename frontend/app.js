@@ -20,6 +20,10 @@ app.get("/", async (req, res) => {
     res.render("index.pug", {response: response});
 });
 
+app.get("/fullchart", (req, res) => {
+    res.render("fullchart.pug");
+}); 
+
 app.get("/contact", (req, res) => {
     res.render("contact.pug");
 });
