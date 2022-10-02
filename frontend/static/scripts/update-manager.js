@@ -11,7 +11,10 @@
 
     socket.on('updateTables', (msg) => {
         const parsedMsg = JSON.parse(msg);
-        TABLE_MANAGER.updateTableData(parsedMsg["live_table"], parsedMsg["table_time"]);
+
+        if (typeof TABLE_MANAGER !== "undefined") {
+            TABLE_MANAGER.updateTableData(parsedMsg["live_table"], parsedMsg["table_time"]);
+        }
     });
 
     socket.on('updateDayChart', (msg) => {
