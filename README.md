@@ -7,6 +7,7 @@ utdgarages was created as a replacement/improvement of the [current](https://ser
 - Responsive chart that displays the garage data for each day of the week
 - Faster than the UTD webpage
 - Updates more frequently than the UTD webpage
+- Full chart displaying all garage spaces data
 
 # Contact
 
