@@ -2,7 +2,7 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
-/* index.html & contact.html */
+/* index.html, contact.html, & fullchart.html */
 #footer {
     display: flex;
     flex-flow: column;
@@ -23,8 +23,8 @@ body {
 }
 
 .footer-button {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .link-button {
@@ -47,6 +47,11 @@ body {
     width: 6.85em;
 }
 
+.link-button-medium-small { 
+    font-size: 0.875em;
+    width: 8.5em;
+}
+
 .link-button:hover {
     color: #ffffff;
     background-color: #000000;
@@ -62,6 +67,10 @@ body {
 
 .icon-contact::before {
     content: "\f1d8";
+}
+
+.icon-full-chart::before {
+    content: "\f201";
 }
 
 .icon-source::before {
@@ -136,6 +145,23 @@ body {
     25% {opacity: 1;}
     85% {opacity: 1;}
     100% {opacity: 0;}
+}
+
+/* fullchart.html */ 
+#full-chart-html {
+    height: 100%;
+}
+
+#full-chart-body {
+    height: calc(100% - 16px);
+}
+
+#full-chart-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 /* index.html */
