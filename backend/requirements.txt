@@ -3,7 +3,7 @@ beautifulsoup4==4.11.1
 certifi==2024.7.4
 charset-normalizer==2.1.1
 Deprecated==1.2.13
-idna==3.3
+idna==3.7
 lxml==4.9.1
 packaging==21.3
 pyparsing==3.0.9
